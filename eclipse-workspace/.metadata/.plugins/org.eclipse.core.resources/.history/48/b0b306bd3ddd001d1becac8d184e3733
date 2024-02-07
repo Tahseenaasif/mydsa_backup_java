@@ -1,0 +1,43 @@
+package Graph;
+
+import java.util.*;
+
+public class graph {
+	public static void print(int edges[][]) {
+		boolean visited[]=new boolean[edges.length];
+		printhelper(edges,visited,0);
+	}
+
+	private static void printhelper(int[][] edges, boolean[] visited,int ste) {
+		System.out.println(ste);
+		visited[ste]=true;
+		for(int i=0;i<edges.length;i++) {
+			if(edges[ste][i]==false && !visited[i]) {
+				printhelper(edges,visited,i);
+			}
+			
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("please enter the no of verices");	
+	         int v=sc.nextInt()	;
+	         
+	    System.out.println("please enter the no of edges");	
+	         int e=sc.nextInt();
+	         
+	         int edges[][]=new int[v][v];
+	         for(int i=0;i<e;i++) {
+	        	 int fe=sc.nextInt();
+	        	 int se=sc.nextInt();
+	        	 edges[fe][se]=1;
+	        	 edges[se][fe]=1;
+	        		 
+	        	 }
+	           print(edges);
+	         }
+	
+
+}

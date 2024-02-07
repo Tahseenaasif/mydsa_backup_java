@@ -1,0 +1,42 @@
+package binary_trees;
+
+import java.util.Scanner;
+
+public class binarytreeuse {
+	public static void print(binarytreenode<Integer> root) {
+		 if(root==null) {
+			 return;
+		 }
+		 String res=root.data+"";
+		 if(root.left!=null) {
+			res="L"+root.left.data+",";
+		 }
+		 if(root.right!=null) {
+			 res="R"+root.right.data+",";
+		 }
+		 System.out.println(res);
+		print(root.left);
+		print(root.right);
+	}
+    public static binarytreenode<Integer> takeinput(Scanner sc) {
+    	int n;
+    	System.out.println("please enter the root ");
+    	   n=sc.nextInt();
+    	 if(n==-1) {
+    		return null;
+    	 }
+    	binarytreenode<Integer> root=new binarytreenode<Integer>(n);
+    	root.left=takeinput(sc);
+    	root.right=takeinput(sc);
+    	 return root;
+    	 
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				
+		Scanner sc=new Scanner(System.in);
+		binarytreenode<Integer> root=takeinput( sc);
+		print(root);
+	}
+
+}

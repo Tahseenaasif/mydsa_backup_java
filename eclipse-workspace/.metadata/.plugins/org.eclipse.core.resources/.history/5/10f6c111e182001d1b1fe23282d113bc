@@ -1,0 +1,184 @@
+package lecture1;
+import java.util.*;
+
+public class helloworld {
+	public static void main(String args[]) {
+		/*System.out.println("hello world");
+		Scanner sc=new Scanner(System.in);
+		//String s=sc.nextLine();
+		String s=sc.next();
+		System.out.println(s);
+		Scanner s = new Scanner(System.in);
+		int a = s.nextInt();
+		String str = s.next();
+		System.out.print(a);
+		System.out.println(str);
+		Scanner s = new Scanner(System.in);
+		String str = s.next();
+		int a = s.nextInt();
+		System.out.print(str + " " + a);
+		
+		Scanner sc=new Scanner(System.in);
+        String name=sc.next();
+		int m1=sc.Int();
+		int m2=sc.nextInt();
+		int m3=sc.nextInt();
+		int average=(m1+m2+m3)/3;
+		System.out.println(name);
+			System.out.println(average);
+		byte b = 50;
+		int c =(int )b * 50;
+		System.out.println(b);
+	    double a = 6 / 4;
+        int b  = 6 / 4;
+        double c = a + b;
+        System.out.println(c);
+		double a = 55.5;
+        int b = 55;
+        a = a % 10;
+        b = b % 10;
+        System.out.println(a + " "  + b);
+		int a=50;
+		if(a>10)
+		{
+		    System.out.print("Coding");
+		}
+		else(a>20)
+		{
+		    System.out.print("Ninjas");
+		}
+		 int x = 15;
+		    if(x <= 15){
+		        System.out.print("Inside if  ");
+		    }else if(x == 15){
+		        System.out.print("Inside else if  ");
+		    }
+		    System.out.println(x);
+		   int var1 = 5; 
+	        int var2 = 6;
+	        if ((var2 = 1) == var1)
+	            System.out.print(var2);
+	        else 
+	            System.out.print(var2 + 1);
+		  int a=50;
+		    int b=5;
+		    if(a/0==b)
+		    {
+
+		        System.out.println("Hello");
+		    }
+		    else
+		    {
+		        System.out.println("Hi");
+		    }
+		 int i=0;
+		   while(i<10)
+		   {
+		       i=i+1;
+		       System.out.print(i);
+		       i=i+1;
+		   }
+		 int x=5;
+		    int y=5;
+		    while(x!=y)
+		    {
+		        System.out.println("Hello");
+		        x++;
+		        y++;
+		    }
+		int i=10;
+	    while((i=i-1)>0)
+	    {
+	        System.out.print(i);
+	        if(i%5==0)
+	            return;
+	    }
+	     int a = 10;
+	     System.out.println(a);
+	       // if(a > 5) {
+	            //int b= 100;
+	            
+	       // }
+	        //System.out.println(a);
+	    }
+		Scanner sc=new Scanner (System.in);
+		int S=sc.nextInt();
+		int E=sc.nextInt();
+		int W=sc.nextInt();	
+		int f=0;	
+		for(int i=S;i<=E;i=i+W){
+			 f = ((i - 32) * 5) / 9;
+			System.out.println(i+" -"+f);
+			}
+Scanner sc= new Scanner(System.in);
+		
+		int S = sc.nextInt(); // start point of Fahrenheit
+		int E = sc.nextInt(); // end point of Fahrenheit
+		int W = sc.nextInt();// jump or gap
+		int c;
+		while (S<=E) {
+			c = 5 * (S-32)/9;
+			System.out.print(S);
+			System.out.print(" ");
+			System.out.println(c);
+			S=S+W;
+		}
+		
+	  	Scanner sc=new Scanner (System.in);
+	int S=sc.nextInt();
+	int E=sc.nextInt();
+	int W=sc.nextInt();	
+	int c;	
+	for(int i=S;i<=E;i=i+W){
+		c = 5 * (i-32)/9;
+		System.out.println(i+" -"+c);
+	}
+Scanner sc= new Scanner(System.in);
+		
+		int S = sc.nextInt(); // start point of Fahrenheit
+		int E = sc.nextInt(); // end point of Fahrenheit
+		int W = sc.nextInt();// jump or gap
+		int c;
+		while (S<=E) {
+			c = 5 * (S-32)/9;
+			
+			System.out.println(S+"-"+c);
+			S=S+W;
+		}
+		Scanner sc=new Scanner(System.in);
+		int salary=sc.nextInt();
+		char grade=sc.next().charAt(0);
+		int hra=(salary*20)/100;
+		int da=(salary*50)/100;
+		int pf=(salary*11)/100;
+		if(grade=='A'){
+			int tatalSalary=salary+hra+da+1700-pf;
+			System.out.println( tatalSalary);
+		}else if(grade=='B'){
+			int tatalSalary=salary+hra+da+1500-pf;
+			System.out.println( tatalSalary);
+		}else{
+			int tatalSalary=salary+hra+da+1300-pf;
+			System.out.println( tatalSalary);
+		}
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=i;j++){
+				System.out.print("i");
+			}
+			System.out.println(" ");
+		}*/
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();//65
+		for (int i = 1; i <= n; i++) {
+			for (int j =1 ; j <=i; j++) {
+				System.out.print((char)('A'+n+j+i-2));
+			}
+			System.out.println(" ");
+		}
+		}
+		
+	}
+
+

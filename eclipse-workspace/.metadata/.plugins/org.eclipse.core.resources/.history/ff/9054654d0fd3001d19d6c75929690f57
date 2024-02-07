@@ -1,0 +1,10 @@
+package prority_queue;
+
+public class sort_kth_sorted {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

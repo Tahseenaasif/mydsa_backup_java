@@ -1,0 +1,21 @@
+package stack;
+
+public class stackuse {
+	public static void main(String args[])throws stackfull, stackempty {
+		stack_by_array stk1=new stack_by_array(50);
+	 for(int i=0;i<19;i++) {
+		 stk1.push(i);
+	 }
+	 int size=stk1.size();
+	 System.out.println("the size of the stack is :- "+size);
+	 for(int i=0;i<19;i++) {
+		 int elem=stk1.pop();
+		 System.out.print(elem+" ");
+	 }
+	 int siz2=stk1.size();
+	 System.out.println();
+	 System.out.println("the size of the stack is :- "+siz2);
+	 
+	}
+
+}

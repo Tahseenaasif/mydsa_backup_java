@@ -1,0 +1,38 @@
+package trees;
+import java.util.*;
+
+public class treeuse {  
+	public static  treeNode<Integer> takeinput(){
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("please enter the next node data");
+		   n=sc.nextInt();
+		treeNode<Integer> root=new treeNode<Integer>(n);
+		System.out.println("please enter no of children "+n);
+		int childcount=sc.nextInt();
+		for(int i=0;i<childcount;i++){
+			treeNode<Integer>child=takeinput();
+			root.children.add(child);
+		}
+		return root;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//				treeNode<Integer> root=new treeNode<>(20);
+//				treeNode<Integer> child1=new treeNode<>(1);
+//				treeNode<Integer> child2=new treeNode<>(3);
+//				treeNode<Integer> child3=new treeNode<>(4);
+//				treeNode<Integer> child4=new treeNode<>(5);
+//				treeNode<Integer> child6=new treeNode<>(6);
+//				treeNode<Integer> child7=new treeNode<>(7);
+//				root.children.add(child2);
+//				root.children.add(child3);
+//				root.children.add(child4);
+//				child1.children.add(child6);
+//				child2.children.add(child7);
+		treeNode<Integer> root=takeinput();
+	}
+
+}

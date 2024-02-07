@@ -1,0 +1,29 @@
+package lecture1;
+ public class pair<t,v>{
+	 private t first;
+	 private v second;
+	 public pair(t first,v second) {
+		 this.first=first;
+		 this.second=second;
+	 }
+	 public void setfisrt(t first) {
+		 this.first=first;
+	 }
+	 public void setsecond(v second) {
+		 this.second=second;
+	 }
+	 public t getfirst() {
+		 return first;
+	 }
+	 public t getsecond() {
+		 return second;
+	 }
+ }
+public class gemerics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		pair<Integer,String > p=new <> pair(1,"tahseen");
+	}
+
+}

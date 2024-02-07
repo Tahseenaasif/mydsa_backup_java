@@ -1,0 +1,17 @@
+package stack;
+
+public class stack_by_array {
+    private int data[];
+    private int top;
+	
+     public  stack_by_array() {
+    	 data=new int[10];
+    	 top=-1;
+     }
+     public stack_by_array(int capacity){
+    	 data=new int[capacity];
+    	 top=-1;
+     }
+     
+	
+}

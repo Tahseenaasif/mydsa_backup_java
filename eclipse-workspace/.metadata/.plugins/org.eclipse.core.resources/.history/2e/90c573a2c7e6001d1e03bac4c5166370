@@ -1,0 +1,12 @@
+package disjoint_set;
+
+public class union_and_find_operations {
+          
+          
+          
+	public static void main(String[] args) {
+		union_find obj=new union_find(5); 
+              obj.find(1);
+	}
+
+}

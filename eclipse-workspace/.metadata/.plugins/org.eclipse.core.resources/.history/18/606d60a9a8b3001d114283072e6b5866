@@ -1,0 +1,143 @@
+package classes_and_objects;
+import java.util.Scanner;
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int degree1[] = new int[n];
+		for(int i = 0; i < n; i++){
+			degree1[i] = s.nextInt();
+		}
+		int coeff1[] = new int[n];
+		for(int i = 0; i < n; i++){
+			coeff1[i] = s.nextInt();
+		}
+		Polynomial first = new Polynomial();
+		for(int i = 0; i < n; i++){
+			first.setCoefficient(degree1[i],coeff1[i]);
+		}
+		n = s.nextInt();
+		int degree2[] = new int[n];
+		for(int i = 0; i < n; i++){
+			degree2[i] = s.nextInt();
+		}
+		 int coeff2[] = new int[n];
+		for(int i = 0; i < n; i++){
+			coeff2[i] = s.nextInt();
+		}
+		Polynomial second = new Polynomia();
+		for(int i = 0; i < n; i++){
+			second.setCoefficient(degree2[i],coeff2[i]);
+		}
+		int choice = s.nextInt();
+		Polynomial result;
+		switch(choice){
+		// Add
+		case 1: 
+			 result = first.add(second);
+			result.print();
+			break;
+		// Subtract	
+		case 2 :
+			 result = first.subtract(second);
+			result.print();
+			break;
+		// Multiply
+		case 3 :
+			 result = first.multiply(second);
+			result.print();
+			break;
+		}
+
+	}
+
+}
+public class Polynomial {
+
+	
+	/* This function sets coefficient for a particular degree value, if degree is not there in the polynomial
+	 *  then corresponding term with specified degree and value is added int the polynomial. If the degree
+	 *  is already present in the polynomial then previous coefficient is replaced by
+	 *  new coefficient value passed as function argument
+	*/private int coff[];
+	private int nextindex;
+
+/*	public void add(int element) {
+		if (nextindex == coff.length) {
+			restructure();
+		}
+		coff[nextindex] = element;
+		nextindex++;
+	}*/
+//	int coffieient[];
+		public void Polynimial(){
+			coff = new int[5];
+			nextindex = 0;
+		}
+	public void setCoefficient(int degree, int coeff){
+					//int degree=nextindex;
+			if (degree > coff.length) {
+			restructure();
+		}
+		coff[nextindex] = coeff;
+		nextindex++;
+		
+	}
+	
+	public void restructure() {
+		int temp[] = coff;
+		coff = new int[nextindex * 2];
+		for (int i = 0; i < temp.length; i++) {
+			coff[i] = temp[i];
+		}
+	}
+	
+	// Prints all the terms(only terms with non zero coefficients are to be printed) in increasing order of degree. 
+	public void print(){
+		for(int i=0;i<cof.length;i++){
+			if(coff[i]==0){
+
+			}else{
+					System.out.println(i+"x"+coff[i]+" ");
+			}
+			
+		}
+	}
+
+	
+	// Adds two polynomials and returns a new polynomial which has result
+	public Polynomial add(Polynomial p){
+				int lenp1=this.coff.length;
+				int lenp2 = p.coff.length;
+				int min=Maths.min(lenp1,lenp2);
+				for(int i=0;i<min;i++){
+					this.coff[i]+=p.coff[i];
+				}
+		
+	}
+	
+	// Subtracts two polynomials and returns a new polynomial which has result
+	public Polynomial subtract(Polynomialp){
+			int lenp1 = this.coff.length;
+		int lenp2 = p.coff.length;
+		int min = Maths.min(lenp1, lenp2);
+		for (int i = 0; i < min; i++) {
+			this.coff[i] -= p.coff[i];
+		}
+	}
+	
+	// Multiply two polynomials and returns a new polynomial which has result
+	public Polynomial multiply(Polynomial p){
+		int lenp1 = this.coff.length;
+		int lenp2 = p.coff.length;
+		int max = Maths.max(lenp1, lenp2);
+		int min = Maths.min(lenp1, lenp2);
+		for (int i = 0; i < max; i++) {
+			for (int j = i; j < min; j++)
+			this.coff[i] *= p.coff[j];
+		}
+	}
+
+}

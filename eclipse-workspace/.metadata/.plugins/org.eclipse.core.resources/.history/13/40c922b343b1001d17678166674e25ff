@@ -1,0 +1,32 @@
+package lecture1;
+
+public class reverse_each_word {
+	public static String reverseEachWord(String str) {
+		//Your code goes here
+		String res="";
+		int i=0,j=0;
+		while(j<str.length()){
+			if(str.charAt(j)!=' '&&j!=str.length()-1){
+				j++;
+			}else{
+				for(int k=j;k>=i;k--){
+					res+=str.charAt(k);
+				}
+				//res+=" ";
+				res+=" ";
+				i=i+2;
+				j=i;
+			}
+			
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str="Welcome to Coding Ninjas";
+		String ress=reverseEachWord(str);
+		System.out.println(ress);
+	}
+
+}
